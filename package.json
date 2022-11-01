@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "LD_PRELOAD=/var/task/node_modules/canvas/build/Release/libz.so.1 next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "vercel-build": "yum install libuuid-devel libmount-devel zlib && cp /lib64/{libuuid,libmount,libblkid,libz}.so.1 node_modules/canvas/build/Release/"
+    "lint": "next lint"
   },
   "dependencies": {
     "canvas": "^2.10.1",
