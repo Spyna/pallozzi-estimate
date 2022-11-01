@@ -33,17 +33,17 @@ function PallozziStage() {
 
   return (
     <div>
-      <div className="flex">
-        <div className="lg:w-1/4">
+      <div className="flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/4">
           <JobControls onJobSubmit={updateJob} />
         </div>
-        <div className="lg:w-3/4">
+        <div className="w-full lg:w-3/4">
           <div className="flex p-2">
-            <div className="text-2xl font-bold mx-5">
+            <div className="lg:text-2xl font-bold mx-5">
               Estimate: {job?.getEstimate(config.weights).toFixed(2)}{" "}
               {job && "days"}
             </div>
-            <Button onClick={onDownload}>Download</Button>
+            <Button onClick={onDownload}>Download image</Button>
           </div>
           <div
             ref={container}
