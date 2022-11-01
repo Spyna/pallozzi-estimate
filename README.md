@@ -1,3 +1,7 @@
+- [Pallozzi Estimate](#pallozzi-estimate)
+  * [Motivation](#motivation)
+  * [Contribute](#contribute)
+
 # Pallozzi Estimate
 
 > *Pallozzi estimate* is an application that helps software developers and project managers estimate things that need to be developed
