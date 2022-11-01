@@ -4,16 +4,13 @@ export default function About() {
   return (
     <div className="container mx-auto p-4 pt-12 ">
       <div className="prose lg:prose-xl dark:prose-invert">
-      <ReactMarkdown children={markdown}>
-        
-          </ReactMarkdown>
+        <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
     </div>
   );
 }
 
-
-const markdown :any = `
+const markdown: any = `
 
 # Pallozzi Estimate
 
@@ -67,4 +64,4 @@ estimate = 1 * (3 * 1 + 1 * 3 + 1 * 5) * 1.8 = 19.8 days
 
 Contribution on this project are welcome. The source code is on github [https://github.com/Spyna/pallozzi-estimate.git](https://github.com/Spyna/pallozzi-estimate.git).
 
-`
+`;
