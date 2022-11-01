@@ -6,7 +6,7 @@
 
 > *Pallozzi estimate* is a web application that helps software developers and project managers estimate things that need to be developed
 
-Reference-style: 
+
 ![Pallozi estimate screenshot][logo]
 
 [logo]: ./screenshot.png "Pallozi estimate screenshot"
