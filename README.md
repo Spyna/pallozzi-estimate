@@ -1,3 +1,9 @@
+# Pallozzi Estimate
+
+> *Pallozzi estimate* is an application that helps software developers and project managers estimate things that need to be developed
+
+## Motivation
+
 The biggest problem in making estimates is that these are precisely: estimates. That is, they are not a definite number of days but are a more or less approximate estimate by their very nature. 
 
 The problem becomes even more significant when developers have to estimate something they do not know. 
@@ -7,13 +13,16 @@ What we unconsciously do when we have to give an estimate is to associate the ta
 The problem with doing this is that sometimes this assessment can be subjective. So how can this problem be solved? 
 
 The basic idea of the Pallozzi estimate is straightforward: you find all the data and actors involved in a task and associate a "weight" with each one. The data can be of three types:
-* Reading
-* Writing
-* Updating
+* Reading: 1 point weight
+* Updating: 3 point weight
+* Writing: 5 point weight
 
 The task estimate is obtained using this formula: 
 ```
-estimate = <number of actor> * ( <number of data to read> * 1 + <number of data to update> * 3 + <number of data to read> * 5) * <multiplier>.
+estimate = 
+<number of actor> * 
+( <number of reads> * 1 + <number of updates> * 3 + <number of writes> * 5) *
+<multiplier>
 ```
 
 Multiplier is a constant that we have identified, and it is: 1.8
@@ -32,6 +41,23 @@ So, according to our formula, we will have the:
 ```
 
 estimate = 1 * (3 * 1 + 1 * 3 + 1 * 5) * 1.8 = 19.8 days
+
+```
+
+## Contribute 
+
+Contribution on this project are welcome. 
+
+This project is developed using Next.js, to run it locally: 
+
+```
+git clone https://github.com/Spyna/pallozzi-estimate.git
+cd pallozzi-estimate
+npm install
+# yarn 
+
+npm run dev
+# yarn dev
 
 ```
 
