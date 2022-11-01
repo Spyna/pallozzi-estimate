@@ -1,10 +1,15 @@
 - [Pallozzi Estimate](#pallozzi-estimate)
-  * [Motivation](#motivation)
-  * [Contribute](#contribute)
+  - [Motivation](#motivation)
+  - [Contribute](#contribute)
 
 # Pallozzi Estimate
 
-> *Pallozzi estimate* is an application that helps software developers and project managers estimate things that need to be developed
+> *Pallozzi estimate* is a web application that helps software developers and project managers estimate things that need to be developed
+
+Reference-style: 
+![Pallozi estimate screenshot][logo]
+
+[logo]: ./screenshot.png "Pallozi estimate screenshot"
 
 ## Motivation
 
@@ -52,7 +57,7 @@ estimate = 1 * (3 * 1 + 1 * 3 + 1 * 5) * 1.8 = 19.8 days
 
 Contribution on this project are welcome. 
 
-This project is developed using Next.js, to run it locally: 
+This project is developed using Next.js and tailwind css to run it locally: 
 
 ```
 git clone https://github.com/Spyna/pallozzi-estimate.git
