@@ -8,7 +8,7 @@ import Script from "next/script";
 const title = "Pallozzi estimate";
 const description =
   "Pallozzi estimate is a web application that helps software developers and project managers estimate things that need to be developed";
-const image = "https://pallozzi.spyna.it/pallozzi-estimate.png";
+const image = "https://estimate.spyna.it/pallozzi-estimate.png";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
