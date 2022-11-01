@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The biggest problem in making estimates is that these are precisely: estimates. That is, they are not a definite number of days but are a more or less approximate estimate by their very nature. 
 
-## Getting Started
+The problem becomes even more significant when developers have to estimate something they do not know. 
 
-First, run the development server:
+What we unconsciously do when we have to give an estimate is to associate the task we have to estimate with something we have already done. Based on our experience, we try to give a similar number to the job we have already developed. 
 
-```bash
-npm run dev
-# or
-yarn dev
+The problem with doing this is that sometimes this assessment can be subjective. So how can this problem be solved? 
+
+The basic idea of the Pallozzi estimate is straightforward: you find all the data and actors involved in a task and associate a "weight" with each one. The data can be of three types:
+* Reading
+* Writing
+* Updating
+
+The task estimate is obtained using this formula: 
+```
+estimate = <number of actor> * ( <number of data to read> * 1 + <number of data to update> * 3 + <number of data to read> * 5) * <multiplier>.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Multiplier is a constant that we have identified, and it is: 1.8
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+For example, if we need to estimate this task: 
+We need to send an invoice to the customer
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+We identify:
+  * actor: Administrator
+  * data element: Invoice (read, write, updates)
+  * data element: Finance (read)
+  * data element: Suppliers (read)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+So, according to our formula, we will have the: 
 
-## Learn More
+```
 
-To learn more about Next.js, take a look at the following resources:
+estimate = 1 * (3 * 1 + 1 * 3 + 1 * 5) * 1.8 = 19.8 days
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
